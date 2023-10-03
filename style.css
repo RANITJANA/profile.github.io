@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+#container {
+    height: 500px;
+    width: 400px;
+    border-radius: 30px;
+    background-color: white;
+    position: relative;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+
+#mode {
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    background: white url('./images/icons8-dark-24.png') no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+    top: 2%;
+    left: 2%;
+}
+
+#mode:hover {
+    cursor: pointer;
+}
+
+.top {
+    position: relative;
+    background-color: rgba(0, 0, 255, 0.899);
+    height: 150px;
+    border-radius: 30px 30px 0px 0px;
+}
+
+#profile_pic {
+    position: relative;
+    margin: auto;
+    top: -25%;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: aliceblue;
+    background: url('./images/own_pic.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.899);
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -115px;
+}
+
+.social img {
+    width: 60px;
+    padding: 20px 3px;
+}
+
+.social a {
+    text-decoration: none;
+}
+
+.contacts {
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 0px 20px;
+}
+
+.contacts button {
+    background-color: blue;
+    border: none;
+    height: 45px;
+    width: 130px;
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#extra {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#extra img {
+    width: 20px;
+}
+
+.box1,
+.box2,
+.box3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+/*hover effects*/
+.social img:hover,
+.contacts button {
+    cursor: pointer;
+}
+
+.contacts button:hover {
+    background-color: rgb(2, 2, 147);
+    animation: words 2s ease infinite;
+}
+
+@keyframes words {
+    0% {
+        letter-spacing: 0px;
+    }
+
+    50% {
+        letter-spacing: 3px;
+    }
+
+    100% {
+        letter-spacing: 0px;
+    }
+}
+
+/*Responsive*/
+@media only screen and (max-width:419px) {
+    #container {
+        width: 90dvw;
+        height: 143dvw;
+        min-height: 450px;
+        max-height: 500px;
+    }
+
+    #profile_pic {
+        width: 40dvw;
+        height: 40dvw;
+        top: 0%;
+        top: -130px;
+        margin: auto;
+    }
+
+    .social img {
+        width: 15dvw;
+    }
+
+    .contacts button {
+        height: 40px;
+        margin: 0 5px 0;
+        margin-bottom: -10px;
+    }
+}
+
+@media only screen and (max-width:353px) {
+    .top {
+        height: 48dvw;
+    }
+}
